@@ -77,7 +77,7 @@ class Picture(Base):
             return f"there is no recongnized user in picture {code}"
 
         max_row, max_col = max(table_info.keys()), max(table_info.values())
-        data = [["" for _ in range(max_col)] for _ in range(max_row)] # 初始化二维列表
+        data = [["-" for _ in range(max_col)] for _ in range(max_row)] # 初始化二维列表
         # 其中(max_col-table_info.get(row))//2为居中偏移量, python3.8支持以下表达式
         # _ = [data[row-1][col-1+(max_col-table_info.get(row))//2] := name for name, row, col in user_info]
 
